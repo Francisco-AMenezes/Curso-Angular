@@ -22,7 +22,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
     EventosComponent,
     EmiterComponent,
     ChangeNumberComponent,
-    ListRenderComponent
+    ListRenderComponent,
   ],
   imports: [
     BrowserModule,
