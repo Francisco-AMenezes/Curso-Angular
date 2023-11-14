@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
+import { Games } from 'src/app/Games';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class ListRenderComponent implements OnInit {
   bg = 'none'
 
 
-  games = [
+  games: Games[] = [
     { plataform: "Ps5", bgame: "Tomb Raider" },
     { plataform: "Xbox S/X", bgame: "Halo" },
     { plataform: "Nintendo Switch", bgame: "Mário kart" },
@@ -35,6 +36,7 @@ export class ListRenderComponent implements OnInit {
   ];
 
   animalDetails = '';
+  bestSeller = ''
 
 
   constructor() { }
@@ -44,5 +46,9 @@ export class ListRenderComponent implements OnInit {
 
   showAge(animal: Animal): void {
     this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`  ;
+  }
+
+  showGame(game:Games): void{
+    this.bestSeller = `O jogo mais vendido dessa plataforma é: ${game.bgame}`
   }
 }
