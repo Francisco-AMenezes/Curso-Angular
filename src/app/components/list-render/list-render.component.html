@@ -1,8 +1,14 @@
 <div class="aula">
     <h2>Animais: </h2>
-    <ul>
+    <ul class="animals">
         <li *ngFor="let animal of animals">
            Nome: {{animal.name}}. Espécie: {{animal.type}}
         </li>
     </ul>
+    <ul class="games ">
+        <li *ngFor="let game of games">
+            Plataforma: {{game.plataform}}. Jogo mais jogado da plataforma: {{game.bgame}}  
+        </li>
+    </ul>
+    
 </div>

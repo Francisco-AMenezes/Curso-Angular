@@ -14,6 +14,13 @@ export class ListRenderComponent implements OnInit {
     {name: 'Loki', type: 'El Gatito'},
   ]
 
+  games = [
+    {plataform: "Ps5", bgame: "Tomb Raider"},
+    {plataform: "Xbox S/X", bgame: "Halo"},
+    {plataform: "Nintendo Switch", bgame: "Mário kart"},
+    {plataform: "PC", bgame:"League of Legends (LOL)"},
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

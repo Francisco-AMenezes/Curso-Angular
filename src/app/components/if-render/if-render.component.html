@@ -1,6 +1,6 @@
 <div class="aula">
     <div *ngIf="canShow"> isso aqui aparece</div>
-    <p *ngIf="name === 'Cassydi ' ; else nameNotFound " [ngStyle]="{'font-size' : '30px'}" > O nome é Cassydi </p>
+    <p *ngIf="name === 'Cassydi' ; else nameNotFound " [ngStyle]="{'font-size' : '30px'}" > O nome é Cassydi </p>
     <ng-template #nameNotFound>
         <div>
             <p [ngStyle]="{'font-size': '30px'}">O nome não é Cassydi</p>
