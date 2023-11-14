@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emiter.component.scss']
 })
 export class EmiterComponent implements OnInit {
+  myNumber: number = 0;
 
   constructor() { }
 
@@ -13,7 +14,7 @@ export class EmiterComponent implements OnInit {
   }
 
   onChangeNumber(){
-    console.log("deu bom!")
+    this.myNumber= Math.floor(Math.random() * 999 );
   }
 
 }
