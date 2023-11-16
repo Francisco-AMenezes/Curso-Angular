@@ -1,20 +1,7 @@
 .animals {
   list-style: none;
   color: deeppink;
-}
-
-.games {
-  list-style: none;
-  margin-left: 400px;
-  margin-top: -110px;
-  border-left: 2px solid black;
-  padding-left: 15px;
-  color: cornflowerblue;
-}
-
-.game-header {
-  margin-left: 415px;
-  margin-top: -50px;
+  padding: 6px;
 }
 
 .animais {
@@ -25,4 +12,8 @@ button {
   border: none;
 
   padding-top: 3px;
+}
+
+.animals ul {
+  padding: 6px;
 }

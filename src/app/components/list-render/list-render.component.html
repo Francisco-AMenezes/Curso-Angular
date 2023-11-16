@@ -1,7 +1,6 @@
 <div class="aula">
   <div class="list-render">
     <h2 class="animais">Animais:</h2>
-    <h2 class="game-header">Jogos:</h2>
     <ul class="animals">
       <li *ngFor="let animal of animals">
         Nome: {{ animal.name }}. Espécie: {{ animal.type }}
@@ -15,31 +14,30 @@
         >
           Ver idade do pet
         </button>
+        <button
+          (click)="removeAnimal(animal)"
+          [ngStyle]="{
+            background: bg,
+            'text-decoration': underline,
+            padding: '5px'
+          }"
+        >
+          Deletar animal
+        </button>
       </li>
     </ul>
     <p *ngIf="showA">
       {{ animalDetails }}
     </p>
-    <button (click)="hideDetails()" [ngStyle]="{ 'margin-left': '350px' }">
+    <button
+      (click)="hideDetails()"
+      [ngStyle]="{
+        'margin-top': '20px',
+        background: bg,
+        'text-decoration': underline
+      }"
+    >
       Esconder detalhes
     </button>
-    <ul class="games">
-      <li *ngFor="let game of games">
-        Plataforma: {{ game.plataform }}.
-        <button
-          (click)="showGame(game)"
-          [ngStyle]="{
-            'text-decoration': underline,
-            background: bg,
-            border: bg
-          }"
-        >
-          Jogo mais jogado da Plataforma
-        </button>
-      </li>
-    </ul>
-    <p *ngIf="gaming" [ngStyle]="{ 'margin-left': '415px' }">
-      {{ bestSeller }}
-    </p>
   </div>
 </div>
