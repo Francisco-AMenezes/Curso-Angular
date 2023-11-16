@@ -1,21 +1,45 @@
- <div class="aula">
-    <h2>Animais: </h2>
+<div class="aula">
+  <div class="list-render">
+    <h2 class="animais">Animais:</h2>
+    <h2 class="game-header">Jogos:</h2>
     <ul class="animals">
-        <li *ngFor="let animal of animals">
-           Nome: {{animal.name}}. Espécie: {{animal.type}}
-           <button (click)="showAge(animal)" [ngStyle]="{'text-decoration' : underline, 'background': bg, 'border': bg }">Ver idade do pet</button>
-        </li>
+      <li *ngFor="let animal of animals">
+        Nome: {{ animal.name }}. Espécie: {{ animal.type }}
+        <button
+          (click)="showAge(animal)"
+          [ngStyle]="{
+            'text-decoration': underline,
+            background: bg,
+            border: bg
+          }"
+        >
+          Ver idade do pet
+        </button>
+      </li>
     </ul>
-    <p>
-        {{animalDetails}}
+    <p *ngIf="showA">
+      {{ animalDetails }}
     </p>
-    <ul class="games ">
-        <li *ngFor="let game of games">
-            Plataforma: {{game.plataform}}. 
-            <button (click)="showGame(game)"[ngStyle]="{'text-decoration' : underline, 'background': bg, 'border': bg }">Jogo mais jogado da Plataforma</button>
-        </li>
+    <button (click)="hideDetails()" [ngStyle]="{ 'margin-left': '350px' }">
+      Esconder detalhes
+    </button>
+    <ul class="games">
+      <li *ngFor="let game of games">
+        Plataforma: {{ game.plataform }}.
+        <button
+          (click)="showGame(game)"
+          [ngStyle]="{
+            'text-decoration': underline,
+            background: bg,
+            border: bg
+          }"
+        >
+          Jogo mais jogado da Plataforma
+        </button>
+      </li>
     </ul>
-    <p [ngStyle]="{'margin-left' : '415px'}">
-        {{bestSeller}}
+    <p *ngIf="gaming" [ngStyle]="{ 'margin-left': '415px' }">
+      {{ bestSeller }}
     </p>
+  </div>
 </div>

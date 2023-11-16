@@ -26,7 +26,8 @@ export class ListRenderComponent implements OnInit {
 
   underline = 'underline'
   bg = 'none'
-
+  showA = true
+  gaming = true
 
   games: Games[] = [
     { plataform: "Ps5", bgame: "Tomb Raider" },
@@ -45,10 +46,19 @@ export class ListRenderComponent implements OnInit {
   }
 
   showAge(animal: Animal): void {
-    this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`  ;
+    this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`,
+    this.showA = true
   }
 
   showGame(game:Games): void{
-    this.bestSeller = `O jogo mais vendido dessa plataforma é: ${game.bgame}`
+    this.bestSeller = `O jogo mais vendido dessa plataforma é: ${game.bgame}`,
+    this.gaming = true
   }
+
+  hideDetails(): void {
+    this.showA = false,
+    this.gaming = false;
+  }
+
+  
 }
