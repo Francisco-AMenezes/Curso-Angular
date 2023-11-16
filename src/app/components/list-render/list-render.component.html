@@ -19,7 +19,8 @@
           [ngStyle]="{
             background: bg,
             'text-decoration': underline,
-            padding: '5px'
+            padding: '5px',
+            'border': bg
           }"
         >
           Deletar animal
@@ -29,14 +30,7 @@
     <p *ngIf="showA">
       {{ animalDetails }}
     </p>
-    <button
-      (click)="hideDetails()"
-      [ngStyle]="{
-        'margin-top': '20px',
-        background: bg,
-        'text-decoration': underline
-      }"
-    >
+    <button (click)="hideDetails()" [ngStyle]="{ border: bg }">
       Esconder detalhes
     </button>
   </div>

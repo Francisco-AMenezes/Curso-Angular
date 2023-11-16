@@ -15,6 +15,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { TestingDataBindingComponent } from './components/testing-data-binding/testing-data-binding.component';
+import { GameListComponent } from './components/game-list/game-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TestingDataBindingComponent } from './components/testing-data-binding/t
     PipesComponent,
     TwoWayBindingComponent,
     TestingDataBindingComponent,
+    GameListComponent,
   ],
   imports: [
     BrowserModule,

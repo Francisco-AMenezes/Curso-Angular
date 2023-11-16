@@ -1,0 +1,21 @@
+<div class="aula">
+    <ul class="games">
+        <li *ngFor="let game of games">
+          Plataforma: {{ game.plataform }}.
+          <button
+            (click)="showGame(game)"
+            [ngStyle]="{
+              'text-decoration': underline,
+              background: bg,
+              border: bg
+            }"
+          >
+            Jogo mais jogado da Plataforma
+          </button>
+        </li>
+      </ul>
+      <p *ngIf="gaming" [ngStyle]="{ 'margin-top': '10px' }">
+        {{ bestSeller }}
+      </p>
+      <button class="button" (click)="hideGame()" [ngStyle]="{'border' : bg}">Esconder best seller</button>
+</div>
