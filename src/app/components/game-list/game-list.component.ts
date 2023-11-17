@@ -1,37 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { Games } from 'src/app/Games';
+import { GameListService } from 'src/app/services/game-list.service';
 
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
-  styleUrls: ['./game-list.component.scss']
+  styleUrls: ['./game-list.component.scss'],
 })
 export class GameListComponent implements OnInit {
-  games: Games[] = [
-    { plataform: "Ps5", bgame: "Tomb Raider" },
-    { plataform: "Xbox S/X", bgame: "Halo" },
-    { plataform: "Nintendo Switch", bgame: "Mário kart" },
-    { plataform: "PC", bgame: "League of Legends (LOL)" },
-  ];
+  games: Games[] = [];
 
-  gaming = true
-  bg ='none'
-  underline ='underline'
-  bestSeller = ''
-  color = 'white'
-  
+  gaming = true;
+  bg = 'none';
+  underline = 'underline';
+  bestSeller = '';
+  color = 'white';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private gameListService: GameListService) {
+    this.getGames();
   }
 
-  showGame(games: Games){
-    this.bestSeller = `O jogo mais jogado da plataforma é: ${games.bgame}`,
-    this.gaming = true 
+  ngOnInit(): void {}
+
+  showGame(games: Games) {
+    (this.bestSeller = `O jogo mais jogado da plataforma é: ${games.bgame}`),
+      (this.gaming = true);
   }
 
-  hideGame(){
-    this.gaming = false
+  hideGame() {
+    this.gaming = false;
+  }
+
+  getGames(): void{
+    this.gameListService.getAll().subscribe((games) => (this.games = games))
   }
 }

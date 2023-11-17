@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ListService {
-  private apiUrl ='https://localhost:3000/animals'
+  private apiUrl ='http://localhost:3000/animals'
   constructor(private http: HttpClient) {}
 
   remove(animals: Animal[], animal: Animal) {
