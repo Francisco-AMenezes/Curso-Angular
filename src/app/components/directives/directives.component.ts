@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.scss']
 })
 export class DirectivesComponent implements OnInit {
-  color = 'green'
+  color = 'white'
   size = '18'
   font = 'Inter'
   style = 'none'

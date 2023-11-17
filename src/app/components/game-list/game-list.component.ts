@@ -18,6 +18,7 @@ export class GameListComponent implements OnInit {
   bg ='none'
   underline ='underline'
   bestSeller = ''
+  color = 'white'
   
 
   constructor() { }

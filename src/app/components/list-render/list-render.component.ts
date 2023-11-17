@@ -10,9 +10,9 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
   animals: Animal[] = [
-    { name: 'Silvão', type: 'cachorro', age: 1 },
-    { name: 'Amélia', type: 'cachorro ', age: 6 },
-    { name: 'Maddona', type: 'cachorro', age: 9 },
+    { name: 'Silvão', type: 'Cachorro', age: 1 },
+    { name: 'Amélia', type: 'Cachorro ', age: 6 },
+    { name: 'Maddona', type: 'Cachorro', age: 9 },
     { name: 'Jade', type: 'El Gaton', age: 1 },
     { name: 'Loki', type: 'El Gatito', age: 0.5 },
   ];

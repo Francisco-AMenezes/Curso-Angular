@@ -1,20 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    padding: 0;
-    margin:0; 
-    box-sizing: border-box;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    padding-bottom: 500px;
-    background: gray;
+body {
+  padding-bottom: 500px;
+  background: url(./assets/helixnebula-bg.jpeg) no-repeat top center/cover;
+  color: whitesmoke;
 }
 
 .aula {
-    border-bottom: 1px solid red;
-    padding: 2em;
-    margin-bottom: 1em;
+  padding: 2em;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
 }
-
-

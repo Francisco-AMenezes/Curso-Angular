@@ -14,7 +14,7 @@ export class EmiterComponent implements OnInit {
   }
 
   onChangeNumber(){
-    this.myNumber= Math.floor(Math.random() * 100 );
+    this.myNumber= Math.floor(Math.random() * 20 );
   }
 
 }

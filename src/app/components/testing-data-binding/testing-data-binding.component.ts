@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testing-data-binding.component.scss'],
 })
 export class TestingDataBindingComponent implements OnInit {
-  phoneModel: any
+  phoneNumber: any
 
   constructor() {}
 
