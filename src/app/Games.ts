@@ -1,4 +1,5 @@
 export interface Games {
-    plataform: string, 
-    bgame: string
+  plataform: string;
+  bgame: string;
+  id: number;
 }

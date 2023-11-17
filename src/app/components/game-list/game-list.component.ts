@@ -32,6 +32,6 @@ export class GameListComponent implements OnInit {
   }
 
   getGames(): void{
-    this.gameListService.getAll().subscribe((games) => (this.games = games))
+    this.gameListService.getAll().subscribe((game) => (this.games = game))
   }
 }

@@ -1,22 +1,25 @@
 <div class="aula">
-    <ul class="games">
-        <li *ngFor="let game of games">
-          Plataforma: {{ game.plataform }}.
-          <button 
-            (click)="showGame(game)"
-            [ngStyle]="{
-              'text-decoration': underline,
-              background: bg,
-              border: bg,
-              color : color
-            }"
-          >
-            Jogo mais jogado da Plataforma
-          </button>
-        </li>
-      </ul>
-      <p *ngIf="gaming" [ngStyle]="{ 'margin-top': '10px' }">
-        {{ bestSeller }}
-      </p>
-      <button class="button3" (click)="hideGame()" [ngStyle]="{'border' : bg}">Limpar best seller</button>
+  <ul class="games">
+    <li *ngFor="let game of games">
+      Plataforma:
+      <a routerLink="/gamelist/: {{game.id}}">{{ game.plataform }} </a>.
+      <button
+        (click)="showGame(game)"
+        [ngStyle]="{
+          'text-decoration': underline,
+          background: bg,
+          border: bg,
+          color: color
+        }"
+      >
+        Jogo mais jogado da Plataforma
+      </button>
+    </li>
+  </ul>
+  <p *ngIf="gaming" [ngStyle]="{ 'margin-top': '10px' }">
+    {{ bestSeller }}
+  </p>
+  <button class="button3" (click)="hideGame()" [ngStyle]="{ border: bg }">
+    Limpar best seller
+  </button>
 </div>

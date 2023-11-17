@@ -15,4 +15,10 @@ export class GameListService {
   getAll(): Observable<Games[]> {
     return this.http.get<Games[]>(this.apiUrl)
   }
+
+  getItem(id : number){
+
+    return this.http.get<Games>(`${this.apiUrl}/${id}`)
+
+  }
 }
