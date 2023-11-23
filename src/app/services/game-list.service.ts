@@ -16,9 +16,9 @@ export class GameListService {
     return this.http.get<Games[]>(this.apiUrl)
   }
 
-  getItem(id : number){
-
-    return this.http.get<Games>(`${this.apiUrl}/${id}`)
-
+  getItem(id: number): Observable<Games> {
+    return this.http.get<Games>(`${this.apiUrl}/${id}`);
+    console.log("numero" ,id)
   }
+
 }

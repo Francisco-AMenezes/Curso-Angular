@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Games } from 'src/app/Games';
 import { ActivatedRoute } from '@angular/router';
+
 import { GameListService } from 'src/app/services/game-list.service';
 
+import { Games } from 'src/app/Games';
+
 @Component({
-  selector: 'app-item-detail',
-  templateUrl: './item-detail.component.html',
-  styleUrls: ['./item-detail.component.scss'],
+  selector: 'app-game-id',
+  templateUrl: './game-id.component.html',
+  styleUrls: ['./game-id.component.scss'],
 })
-export class ItemDetailComponent implements OnInit {
+export class GameIdComponent implements OnInit {
   game?: Games;
+
 
   constructor(
     private gameListService: GameListService,
@@ -18,10 +21,16 @@ export class ItemDetailComponent implements OnInit {
     this.getGame();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  getGame() {
+  getGame(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.gameListService.getItem(id).subscribe((game) => (this.game = game));
+    console.log("games", this.game)
   }
-}
+    
+  }
+
+  
+

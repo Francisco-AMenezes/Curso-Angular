@@ -2,7 +2,7 @@
   <ul class="games">
     <li *ngFor="let game of games">
       Plataforma:
-      <a routerLink="/gamelist/: {{game.id}}">{{ game.plataform }} </a>.
+      <a routerLink="/gamelist/{{ game.id }}">{{ game.plataform }} </a>
       <button
         (click)="showGame(game)"
         [ngStyle]="{

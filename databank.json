@@ -1,8 +1,8 @@
 {
   "Games": [
-    { "Id": 1, "plataform": "Ps5", "bgame": "Tomb Raider" },
-    { "Id": 2, "plataform": "Xbox S/X", "bgame": "Halo" },
-    { "Id": 3, "plataform": "Nintendo Switch", "bgame": "Mário kart" },
-    { "Id": 4, "plataform": "PC", "bgame": "League of Legends (LOL)" }
+    { "id": 1, "plataform": "Ps5", "bgame": "Tomb Raider" },
+    { "id": 2, "plataform": "Xbox S/X", "bgame": "Halo" },
+    { "id": 3, "plataform": "Nintendo Switch", "bgame": "Mário kart" },
+    { "id": 4, "plataform": "PC", "bgame": "League of Legends (LOL)" }
   ]
 }
