@@ -34,13 +34,12 @@ export class ListRenderComponent implements OnInit {
   }
 
   removeAnimal(animal: Animal) {
+    console.log("Removendo animal")
     this.animals = this.animals.filter((a) => animal.name !== a.name);
-    //this.listService.remove(this.animals, animal);
+    this.listService.remove(animal.id).subscribe();
   }
 
   getAnimals(): void {
     this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
-
-  
 }
