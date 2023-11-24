@@ -13,7 +13,6 @@ import { Games } from 'src/app/Games';
 export class GameIdComponent implements OnInit {
   game?: Games;
 
-
   constructor(
     private gameListService: GameListService,
     private route: ActivatedRoute
@@ -21,16 +20,12 @@ export class GameIdComponent implements OnInit {
     this.getGame();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getGame(): void {
+    alert('Abrindo busca por id');
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.gameListService.getItem(id).subscribe((game) => (this.game = game));
-    console.log("games", this.game)
+    console.log('games', this.game);
   }
-    
-  }
-
-  
-
+}
