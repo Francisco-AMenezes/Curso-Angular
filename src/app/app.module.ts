@@ -18,6 +18,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
 import { TestingDataBindingComponent } from './components/testing-data-binding/testing-data-binding.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { GameIdComponent } from './components/game-id/game-id.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { GameIdComponent } from './components/game-id/game-id.component';
     TestingDataBindingComponent,
     GameListComponent,
     GameIdComponent,
+    ItemDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

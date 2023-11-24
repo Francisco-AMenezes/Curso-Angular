@@ -1,10 +1,9 @@
 {
   "animals": [
-    { "name": "Silvão", "type": "Cachorro", "age": 1 },
-    { "name": "Amélia", "type": "Cachorro ", "age": 6 },
-    { "name": "Maddona", "type": "Cachorro", "age": 9 },
-    { "name": "Jade", "type": "El Gaton", "age": 1 },
-    { "name": "Loki", "type": "El Gatito", "age": 0.5 }
+    { "id": 1, "name": "Silvão", "type": "Cachorro", "age": 1 },
+    { "id": 2, "name": "Amélia", "type": "Cachorro ", "age": 6 },
+    { "id": 3, "name": "Maddona", "type": "Cachorro", "age": 9 },
+    { "id": 4, "name": "Jade", "type": "El Gaton", "age": 1 },
+    { "id": 5, "name": "Loki", "type": "El Gatito", "age": 0.5 }
   ]
 }
-
